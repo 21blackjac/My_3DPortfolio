@@ -32,7 +32,7 @@ const Navbar = () => {
       } px-[240.8px] w-full flex items-center py-5 fixed top-0 z-20 ${
         scrolled ? "bg-primary" : "bg-transparent"
       }`}
-      style={{ padding: "42px 0 42px 100.8px", backgroundColor: "transparent" }}
+      style={{ padding: "25px 0 42px 100.8px", backgroundColor: "transparent" }}
     >
       <div className="w-full flex justify-between items-center  mx-auto">
         <Link
@@ -48,7 +48,7 @@ const Navbar = () => {
             alt="Mustapha's Logo"
             className="w-10 h-10 object-contain rounded-full shadow-md transition-transform duration-300 hover:scale-105"
           />
-          <p className="text-white text-[25px] font-bold cursor-pointer flex ">
+          <p className="text-white text-[19px] font-bold cursor-pointer flex ">
             Mustapha Chaiq &nbsp;
             <span className="sm:block hidden"> | Full Stack Developer</span>
           </p>
@@ -62,7 +62,7 @@ const Navbar = () => {
               key={nav.id}
               className={`${
                 active === nav.title ? "text-white" : "text-secondary"
-              } hover:text-white text-[25px] font-medium cursor-pointer`}
+              } hover:text-white text-[19px] font-medium cursor-pointer`}
               onClick={() => setActive(nav.title)}
             >
               <a href={`#${nav.id}`}>{nav.title}</a>
