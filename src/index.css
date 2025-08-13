@@ -64,6 +64,42 @@
       font-size: 1.125rem;
       line-height: 1.75rem;
     }
+
+    .sm\:pl-\[0px\]\! {
+      padding-left: 47px !important;
+    }
+  }
+
+  @media (max-width: 640px) {
+    /* All flex become block */
+    .flex {
+      display: block !important;
+    }
+
+    .mx-\[100px\]\! {
+      margin-inline: 0 !important;
+    }
+
+    .pl-\[47px\]\! {
+      padding-left: 0 !important;
+    }
+
+    /* Remove horizontal paddings/margins */
+    .px-6,
+    .px-16,
+    .mx-6,
+    .mx-16,
+    .mx-\[100px\] {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+    }
+
+    /* Add spacing between stacked items */
+    .flex > *:not(:last-child) {
+      margin-bottom: 1rem !important; /* tweak to taste */
+    }
   }
 }
 
