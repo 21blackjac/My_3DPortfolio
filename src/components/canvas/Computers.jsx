@@ -1,5 +1,5 @@
-import React, { Suspense, useEffect, useState, useRef } from "react";
-import { Canvas, useThree } from "@react-three/fiber";
+import React, { Suspense, useEffect, useState } from "react";
+import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 import CanvasLoader from "../Loader";
 
@@ -29,23 +29,6 @@ const Computers = ({ isMobile }) => {
   );
 };
 
-// Mobile-safe Canvas wrapper
-const SafeCanvas = ({ children, ...props }) => {
-  const canvasRef = useRef();
-  const { gl } = useThree();
-
-  useEffect(() => {
-    return () => {
-      if (gl) {
-        gl.getContext().getExtension("WEBGL_lose_context")?.loseContext();
-      }
-    };
-  }, [gl]);
-
-  return <Canvas ref={canvasRef} {...props}>{children}</Canvas>;
-};
-
-// ComputersCanvas component
 const ComputersCanvas = () => {
   const [isMobile, setIsMobile] = useState(false);
 
@@ -59,12 +42,18 @@ const ComputersCanvas = () => {
   }, []);
 
   return (
-    <SafeCanvas
+    <Canvas
       frameloop="demand"
       shadows
       dpr={[1, 2]}
       camera={{ position: [20, 3, 5], fov: 25 }}
       gl={{ preserveDrawingBuffer: true }}
+      onCreated={({ gl }) => {
+        // Dispose WebGL context on unmount to prevent mobile issues
+        return () => {
+          gl.getContext().getExtension("WEBGL_lose_context")?.loseContext();
+        };
+      }}
     >
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls
@@ -74,9 +63,8 @@ const ComputersCanvas = () => {
         />
         <Computers isMobile={isMobile} />
       </Suspense>
-
       <Preload all />
-    </SafeCanvas>
+    </Canvas>
   );
 };
 
