@@ -3,22 +3,7 @@ import { Canvas, useThree } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 import CanvasLoader from "../Loader";
 
-// Component to dispose WebGL on unmount
-const SafeCanvas = ({ children, ...props }) => {
-  const canvasRef = useRef();
-  const { gl } = useThree();
-
-  useEffect(() => {
-    return () => {
-      if (gl) {
-        gl.getContext().getExtension("WEBGL_lose_context")?.loseContext();
-      }
-    };
-  }, [gl]);
-
-  return <Canvas ref={canvasRef} {...props}>{children}</Canvas>;
-};
-
+// Computers component
 const Computers = ({ isMobile }) => {
   const computer = useGLTF("/desktop_pc/scene.gltf");
 
@@ -44,6 +29,23 @@ const Computers = ({ isMobile }) => {
   );
 };
 
+// Mobile-safe Canvas wrapper
+const SafeCanvas = ({ children, ...props }) => {
+  const canvasRef = useRef();
+  const { gl } = useThree();
+
+  useEffect(() => {
+    return () => {
+      if (gl) {
+        gl.getContext().getExtension("WEBGL_lose_context")?.loseContext();
+      }
+    };
+  }, [gl]);
+
+  return <Canvas ref={canvasRef} {...props}>{children}</Canvas>;
+};
+
+// ComputersCanvas component
 const ComputersCanvas = () => {
   const [isMobile, setIsMobile] = useState(false);
 
@@ -57,7 +59,7 @@ const ComputersCanvas = () => {
   }, []);
 
   return (
-    <Canvas
+    <SafeCanvas
       frameloop="demand"
       shadows
       dpr={[1, 2]}
@@ -74,7 +76,7 @@ const ComputersCanvas = () => {
       </Suspense>
 
       <Preload all />
-    </Canvas>
+    </SafeCanvas>
   );
 };
 
