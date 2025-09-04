@@ -1,0 +1,11 @@
+/desktop_pc/*.gltf
+  Content-Type: model/gltf+json
+
+/desktop_pc/*.bin
+  Content-Type: application/octet-stream
+
+/desktop_pc/textures/*.png
+  Content-Type: image/png
+
+/desktop_pc/textures/*.jpeg
+  Content-Type: image/jpeg
