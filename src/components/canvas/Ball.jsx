@@ -1,4 +1,4 @@
-import React, { Suspense, useEffect, useRef } from "react";
+import React, { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
 import {
   Decal,
@@ -9,6 +9,7 @@ import {
 } from "@react-three/drei";
 import CanvasLoader from "../Loader";
 
+// Ball component
 const Ball = ({ imgUrl }) => {
   const [decal] = useTexture([imgUrl]);
 
@@ -36,41 +37,25 @@ const Ball = ({ imgUrl }) => {
   );
 };
 
+// BallCanvas component
 const BallCanvas = ({ icon }) => {
-  const canvasRef = useRef();
-
-  useEffect(() => {
-    const canvasNode = canvasRef.current;
-    return () => {
-      // Proper cleanup on component unmount
-      if (canvasNode) {
-        const gl = canvasNode.getContext('webgl') || canvasNode.getContext('experimental-webgl');
-        
-        if (gl) {
-          // Force garbage collection
-          gl.getExtension('WEBGL_lose_context')?.loseContext();
-        }
-      }
-    };
-  }, []);
-
   return (
     <Canvas
-      ref={canvasRef}
       frameloop="demand"
       dpr={[1, 2]}
-      gl={{ 
-        preserveDrawingBuffer: true,
-        // Add power preference for better mobile performance
-        powerPreference: "high-performance",
-        // Add antialias only if needed (can be expensive on mobile)
-        antialias: false
+      gl={{ preserveDrawingBuffer: true }}
+      onCreated={({ gl }) => {
+        // Dispose WebGL context on unmount (mobile-safe)
+        return () => {
+          gl.getContext().getExtension("WEBGL_lose_context")?.loseContext();
+        };
       }}
     >
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls enableZoom={false} />
         <Ball imgUrl={icon} />
       </Suspense>
+
       <Preload all />
     </Canvas>
   );

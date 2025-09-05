@@ -1,8 +1,9 @@
-import React, { Suspense, useEffect, useState, useRef } from "react";
+import React, { Suspense, useEffect, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 import CanvasLoader from "../Loader";
 
+// Computers component
 const Computers = ({ isMobile }) => {
   const computer = useGLTF("/desktop_pc/scene.gltf");
 
@@ -30,7 +31,6 @@ const Computers = ({ isMobile }) => {
 
 const ComputersCanvas = () => {
   const [isMobile, setIsMobile] = useState(false);
-  const canvasRef = useRef();
 
   useEffect(() => {
     const mediaQuery = window.matchMedia("(max-width: 500px)");
@@ -38,32 +38,21 @@ const ComputersCanvas = () => {
 
     const handleChange = (e) => setIsMobile(e.matches);
     mediaQuery.addEventListener("change", handleChange);
-
-    // Capture the current value of canvasRef
-    const currentCanvas = canvasRef.current;
-    
-    return () => {
-      mediaQuery.removeEventListener("change", handleChange);
-      
-      // Cleanup WebGL context
-      if (currentCanvas) {
-        const gl = currentCanvas.getContext('webgl') || currentCanvas.getContext('experimental-webgl');
-        gl.getExtension('WEBGL_lose_context')?.loseContext();
-      }
-    };
+    return () => mediaQuery.removeEventListener("change", handleChange);
   }, []);
 
   return (
     <Canvas
-      ref={canvasRef}
       frameloop="demand"
       shadows
       dpr={[1, 2]}
       camera={{ position: [20, 3, 5], fov: 25 }}
-      gl={{ 
-        preserveDrawingBuffer: true,
-        powerPreference: "high-performance",
-        antialias: false
+      gl={{ preserveDrawingBuffer: true }}
+      onCreated={({ gl }) => {
+        // Dispose WebGL context on unmount to prevent mobile issues
+        return () => {
+          gl.getContext().getExtension("WEBGL_lose_context")?.loseContext();
+        };
       }}
     >
       <Suspense fallback={<CanvasLoader />}>
