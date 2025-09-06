@@ -118,7 +118,7 @@ const experiences = [
     company_name: "CIH BANK",
     icon: Cihbank,
     iconBg: "#383E56",
-    date: "june 2025 - july 2025   |   Casablanca - Stage",
+    date: "june 2025 - july 2025   |   Casablanca - Internship",
     points: [
       "Developing a complete budget management web application using React.js, Node.js, and MySQL.",
       "Integrating a Clerk authentication with Google OAuth2 support, user synchronization with the MySQL database.",
@@ -131,7 +131,7 @@ const experiences = [
     company_name: "Office National des Chemins de Fer",
     icon: Oncf,
     iconBg: "#E6DEDD",
-    date: "March 2024 - April 2024  |  Rabat - Stage",
+    date: "March 2024 - April 2024  |  Rabat - Internship",
     points: [
       "Analysing functional and technical requirements for the integration of the website.",
       "Participating in integration testing and verification of compatibility with existing systems.",
