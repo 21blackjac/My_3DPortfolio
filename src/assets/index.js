@@ -19,7 +19,7 @@ import reactjs from "./tech/reactjs.png";
 import redux from "./tech/redux.png";
 import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
-import threejs from "./tech/threejs.svg";
+import laravel from "./tech/laravel.png";
 
 import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
@@ -29,9 +29,6 @@ import Oncf from "./company/Oncf.png";
 import moroccoTravel from "./moroccoTravel.png";
 import atlassGym from "./atlassGym.png";
 import financeApp from "./financeApp.png";
-
-
-
 
 export {
   logo,
@@ -54,12 +51,12 @@ export {
   redux,
   tailwind,
   typescript,
-  threejs,
+  laravel,
   meta,
   shopify,
   Cihbank,
   Oncf,
   moroccoTravel,
   atlassGym,
-  financeApp
+  financeApp,
 };

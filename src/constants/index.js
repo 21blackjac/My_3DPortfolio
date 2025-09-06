@@ -17,10 +17,10 @@ import {
   docker,
   Cihbank,
   Oncf,
-  threejs,
+  laravel,
   moroccoTravel,
   atlassGym,
-  financeApp
+  financeApp,
 } from "../assets";
 
 export const navLinks = [
@@ -95,8 +95,8 @@ const technologies = [
     icon: mongodb,
   },
   {
-    name: "Three JS",
-    icon: threejs,
+    name: "Laravel",
+    icon: laravel,
   },
   {
     name: "git",
@@ -207,7 +207,8 @@ const projects = [
       },
     ],
     image: financeApp, // import the screenshot or relevant image
-    source_code_link: "https://github.com/21blackjac/Projet_Stage_GestionFinanciere", // Replace with actual repo link
+    source_code_link:
+      "https://github.com/21blackjac/Projet_Stage_GestionFinanciere", // Replace with actual repo link
   },
 ];
 

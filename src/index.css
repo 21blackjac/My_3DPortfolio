@@ -64,6 +64,20 @@
     margin-right: 100px !important;
   }
 
+  @media (min-width: 450px) {
+    .xs\:bg-green-400 {
+      background-color: #4ade80; /* Tailwind green-400 */
+    }
+    .xs\:text-lg {
+      font-size: 1.125rem;
+      line-height: 1.75rem;
+    }
+
+    .sm\:pl-\[0px\]\! {
+      padding-left: 47px !important;
+    }
+  }
+
   @media (max-width: 640px) {
     /* All flex become block */
     .flex {
