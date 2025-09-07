@@ -26,189 +26,107 @@ import {
 export const navLinks = [
   {
     id: "about",
-    title: "About",
+    title: "About", // ✅ translation key
   },
   {
     id: "work",
-    title: "Work",
+    title: "Work", // ✅ translation key
   },
   {
     id: "contact",
-    title: "Contact",
+    title: "Contact", // ✅ translation key
   },
 ];
 
 const services = [
   {
-    title: "Full-Stack Developer",
+    title: "skills.fullstack", // ✅
     icon: web,
   },
   {
-    title: "React Native Developer",
+    title: "skills.reactnative", // ✅
     icon: mobile,
   },
   {
-    title: "Backend Developer",
+    title: "skills.backend", // ✅
     icon: backend,
   },
   {
-    title: "API & Auth Specialist",
+    title: "skills.api", // ✅
     icon: creator,
   },
 ];
 
 const technologies = [
-  {
-    name: "HTML 5",
-    icon: html,
-  },
-  {
-    name: "CSS 3",
-    icon: css,
-  },
-  {
-    name: "JavaScript",
-    icon: javascript,
-  },
-  {
-    name: "TypeScript",
-    icon: typescript,
-  },
-  {
-    name: "React JS",
-    icon: reactjs,
-  },
-  {
-    name: "Redux Toolkit",
-    icon: redux,
-  },
-  {
-    name: "Tailwind CSS",
-    icon: tailwind,
-  },
-  {
-    name: "Node JS",
-    icon: nodejs,
-  },
-  {
-    name: "MongoDB",
-    icon: mongodb,
-  },
-  {
-    name: "Laravel",
-    icon: laravel,
-  },
-  {
-    name: "git",
-    icon: git,
-  },
-  {
-    name: "figma",
-    icon: figma,
-  },
-  {
-    name: "docker",
-    icon: docker,
-  },
+  { name: "HTML 5", icon: html },
+  { name: "CSS 3", icon: css },
+  { name: "JavaScript", icon: javascript },
+  { name: "TypeScript", icon: typescript },
+  { name: "React JS", icon: reactjs },
+  { name: "Redux Toolkit", icon: redux },
+  { name: "Tailwind CSS", icon: tailwind },
+  { name: "Node JS", icon: nodejs },
+  { name: "MongoDB", icon: mongodb },
+  { name: "Laravel", icon: laravel },
+  { name: "git", icon: git },
+  { name: "figma", icon: figma },
+  { name: "docker", icon: docker },
 ];
 
 const experiences = [
   {
-    title: "Full Stack Developer - Financial Management website",
-    company_name: "CIH BANK",
+    title: "exp1.title", // ✅
+    company_name: "exp1.company",
     icon: Cihbank,
     iconBg: "#383E56",
-    date: "june 2025 - july 2025   |   Casablanca - Internship",
-    points: [
-      "Developing a complete budget management web application using React.js, Node.js, and MySQL.",
-      "Integrating a Clerk authentication with Google OAuth2 support, user synchronization with the MySQL database.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Implementing a secure middleware using JWT and verification of Clerk sessions.",
-    ],
+    date: "exp1.date",
+    points: ["exp1.task1", "exp1.task2", "exp1.task3", "exp1.task4"], // ✅
   },
   {
-    title: "Website Integration Project Assistant",
-    company_name: "Office National des Chemins de Fer",
+    title: "exp2.title", // ✅
+    company_name: "exp2.company",
     icon: Oncf,
     iconBg: "#E6DEDD",
-    date: "March 2024 - April 2024  |  Rabat - Internship",
-    points: [
-      "Analysing functional and technical requirements for the integration of the website.",
-      "Participating in integration testing and verification of compatibility with existing systems.",
-      "Contributing to the development of specific modules and debugging of the application.",
-      "Participating in functional, user, and performance testing to ensure quality.",
-    ],
+    date: "exp2.date",
+    points: ["exp2.task1", "exp2.task2", "exp2.task3", "exp2.task4"], // ✅
   },
 ];
 
 const projects = [
   {
-    name: "Morocco Travel",
-    description:
-      "A travel agency platform that allows users to explore destinations, search and filter trips, view popular places, and make bookings. Features include destination search, rating display, and multilingual support.",
+    name: "proj1.title", // ✅
+    description: "proj1.desc", // ✅
     tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "tailwind",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "restapi",
-        color: "green-text-gradient",
-      },
+      { name: "react", color: "blue-text-gradient" },
+      { name: "tailwind", color: "pink-text-gradient" },
+      { name: "restapi", color: "green-text-gradient" },
     ],
-    image: moroccoTravel, // import the screenshot or relevant image
+    image: moroccoTravel,
     source_code_link: "https://github.com/21blackjac/Agence_Voyage_PFC",
   },
   {
-    name: "Atlass Gym",
-    description:
-      "A fitness club website that provides information about gym services, events, and competitions. Includes user registration, location display, contact details, and promotional sections for upcoming events.",
+    name: "proj2.title", // ✅
+    description: "proj2.desc", // ✅
     tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "css",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "nodejs",
-        color: "green-text-gradient",
-      },
+      { name: "react", color: "blue-text-gradient" },
+      { name: "css", color: "pink-text-gradient" },
+      { name: "nodejs", color: "green-text-gradient" },
     ],
-    image: atlassGym, // import the screenshot or relevant image
+    image: atlassGym,
     source_code_link: "https://github.com/21blackjac/AtlassGymProject",
   },
   {
-    name: "Financial Management",
-    description:
-      "Developed a full-stack financial management app at CIH Bank featuring Clerk authentication, transaction tracking, budget alerts, and PDF/Excel exports. Built an admin dashboard for user, account, and transaction management.",
+    name: "proj3.title", // ✅
+    description: "proj3.desc", // ✅
     tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "tailwind",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "nodejs",
-        color: "green-text-gradient",
-      },
-      {
-        name: "mysql",
-        color: "orange-text-gradient",
-      },
+      { name: "react", color: "blue-text-gradient" },
+      { name: "tailwind", color: "pink-text-gradient" },
+      { name: "nodejs", color: "green-text-gradient" },
+      { name: "mysql", color: "orange-text-gradient" },
     ],
-    image: financeApp, // import the screenshot or relevant image
+    image: financeApp,
     source_code_link:
-      "https://github.com/21blackjac/Projet_Stage_GestionFinanciere", // Replace with actual repo link
+      "https://github.com/21blackjac/Projet_Stage_GestionFinanciere",
   },
 ];
 

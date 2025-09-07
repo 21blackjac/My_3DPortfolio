@@ -1,12 +1,12 @@
 import React from "react";
 import Tilt from "react-parallax-tilt";
-
 import { styles } from "../styles";
 import { github } from "../assets";
 import { SectionWrapper } from "../hoc";
 import { projects } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next"; // ✅ import translations
 
 const ProjectCard = ({
   index,
@@ -16,6 +16,8 @@ const ProjectCard = ({
   image,
   source_code_link,
 }) => {
+  const { t } = useTranslation(); // ✅ translation hook
+
   return (
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
       <Tilt
@@ -49,9 +51,10 @@ const ProjectCard = ({
         <br />
 
         <div className="mt-5">
-          <h3 className="text-white font-bold text-[24px]">{name}</h3>
+          {/* ✅ Translate project name & description */}
+          <h3 className="text-white font-bold text-[24px]">{t(name)}</h3>
           <br />
-          <p className="mt-2 text-secondary text-[14px]">{description}</p>
+          <p className="mt-2 text-secondary text-[14px]">{t(description)}</p>
           <br />
         </div>
 
@@ -71,13 +74,16 @@ const ProjectCard = ({
 };
 
 const Works = () => {
+  const { t } = useTranslation();
+
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={`${styles.sectionSubText} `} style={{ fontSize: "20px" }}>
-          My work
+        {/* ✅ Translations for section headers */}
+        <p className={`${styles.sectionSubText}`} style={{ fontSize: "20px" }}>
+          {t("projects_section")}
         </p>
-        <h2 className={`${styles.sectionHeadText}`}>Projects</h2>
+        <h2 className={`${styles.sectionHeadText}`}>{t("projects")}</h2>
       </motion.div>
 
       <div className="w-full flex">
@@ -86,11 +92,7 @@ const Works = () => {
           className="mt-3 text-secondary text-[20px] max-w-3xl leading-[30px]"
           style={{ margin: "40px 0" }}
         >
-          Following projects showcases my skills and experience through
-          real-world examples of my work. Each project is briefly described with
-          links to code repositories and live demos in it. It reflects my
-          ability to solve complex problems, work with different technologies,
-          and manage projects effectively.
+          {t("projects_intro")}
         </motion.p>
       </div>
 

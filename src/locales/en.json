@@ -1,0 +1,81 @@
+{
+  "nav": {
+    "about": "About",
+    "work": "Work",
+    "contact": "Contact"
+  },
+
+  "hero": {
+    "greeting": "Hi, I'm",
+    "subtitle1": "I build modern web apps, user interfaces,",
+    "subtitle2": "and bring ideas to life with interactive 3D designs"
+  },
+
+  "about": {
+    "intro": "Introduction",
+    "overview": "Overview",
+    "description": "I'm a skilled full-stack developer with hands-on experience building modern web applications using MongoDB, Express, React, Node.js, MySQL, and Laravel. I've built secure admin dashboards, financial tools, and authentication systems with JWT and Clerk (OAuth2). I also have a background in AI, data science, and systems administration, and I'm always eager to explore new tools and challenges."
+  },
+
+  "skills": {
+    "fullstack": "Full Stack Developer",
+    "reactnative": "React Native Developer",
+    "backend": "Backend Developer",
+    "api": "API Integration"
+  },
+
+  "work_intro": "What I have done so far",
+  "work_exp": "Work Experience",
+
+  "exp1": {
+    "title": "Full Stack Developer - Financial Management website",
+    "company": "CIH BANK",
+    "date": "June 2025 - July 2025 | Casablanca - Internship",
+    "task1": "Developing a complete budget management web application using React.js, Node.js, and MySQL.",
+    "task2": "Integrating Clerk authentication with Google OAuth2 support and syncing with MySQL database.",
+    "task3": "Implementing responsive design and ensuring cross-browser compatibility.",
+    "task4": "Implementing secure middleware using JWT and Clerk session verification."
+  },
+
+  "exp2": {
+    "title": "Website Integration Project Assistant",
+    "company": "Office National des Chemins de Fer",
+    "date": "March 2024 - April 2024 | Rabat - Internship",
+    "task1": "Analysing functional and technical requirements for the integration of the website.",
+    "task2": "Participating in integration testing and verifying compatibility with existing systems.",
+    "task3": "Contributing to the development of specific modules and debugging.",
+    "task4": "Participating in functional, user, and performance testing to ensure quality."
+  },
+
+  "projects_section": "My work",
+  "projects": "Projects",
+  "projects_intro": "Following projects showcase my skills and experience through real-world examples. Each project is briefly described with links to code repositories and live demos.",
+
+  "proj1": {
+    "title": "Morocco Travel",
+    "desc": "A travel agency platform that allows users to explore destinations, search trips, and make bookings with multilingual support."
+  },
+  "proj2": {
+    "title": "Atlass Gym",
+    "desc": "A fitness club website showcasing gym services, events, and competitions. Includes user registration, contact details, and promotional events."
+  },
+  "proj3": {
+    "title": "Financial Management",
+    "desc": "A full-stack financial management app with Clerk authentication, transaction tracking, budget alerts, and an admin dashboard."
+  },
+
+  "contact": {
+    "getInTouch": "Get in touch",
+    "successMessage": "Thank you. I will get back to you as soon as possible.",
+    "form": {
+      "nameLabel": "Your Name",
+      "namePlaceholder": "What's your good name?",
+      "emailLabel": "Your email",
+      "emailPlaceholder": "What's your web address?",
+      "messageLabel": "Your Message",
+      "messagePlaceholder": "What you want to say?",
+      "sending": "Sending...",
+      "submit": "Contact me"
+    }
+  }
+}

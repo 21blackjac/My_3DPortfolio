@@ -1,0 +1,81 @@
+{
+  "nav": {
+    "about": "À propos",
+    "work": "Travail",
+    "contact": "Contact"
+  },
+
+  "hero": {
+    "greeting": "Salut, je suis",
+    "subtitle1": "Je construis des applications web modernes, des interfaces utilisateur,",
+    "subtitle2": "et je donne vie aux idées avec des designs 3D interactifs"
+  },
+
+  "about": {
+    "intro": "Introduction",
+    "overview": "Aperçu",
+    "description": "Je suis un développeur full-stack compétent avec une expérience pratique dans la construction d'applications web modernes utilisant MongoDB, Express, React, Node.js, MySQL et Laravel. J'ai construit des tableaux de bord administrateur sécurisés, des outils financiers et des systèmes d'authentification avec JWT et Clerk (OAuth2). J'ai également une formation en IA, science des données et administration système, et je suis toujours impatient d'explorer de nouveaux outils et défis."
+  },
+
+  "skills": {
+    "fullstack": "Développeur Full Stack",
+    "reactnative": "Développeur React Native",
+    "backend": "Développeur Backend",
+    "api": "Intégration d'API"
+  },
+
+  "work_intro": "Ce que j'ai fait jusqu'à présent",
+  "work_exp": "Expérience professionnelle",
+
+  "exp1": {
+    "title": "Développeur Full Stack - Site de gestion financière",
+    "company": "CIH BANK",
+    "date": "Juin 2025 - Juillet 2025 | Casablanca - Stage",
+    "task1": "Développement d'une application web complète de gestion de budget avec React.js, Node.js et MySQL.",
+    "task2": "Intégration de Clerk avec Google OAuth2 et synchronisation avec MySQL.",
+    "task3": "Mise en œuvre d'un design responsive et compatibilité multi-navigateurs.",
+    "task4": "Mise en place d’un middleware sécurisé utilisant JWT et vérification des sessions Clerk."
+  },
+
+  "exp2": {
+    "title": "Assistant Projet d’Intégration de Site Web",
+    "company": "Office National des Chemins de Fer",
+    "date": "Mars 2024 - Avril 2024 | Rabat - Stage",
+    "task1": "Analyse des besoins fonctionnels et techniques pour l’intégration du site.",
+    "task2": "Participation aux tests d’intégration et vérification de la compatibilité.",
+    "task3": "Contribution au développement de modules spécifiques et débogage.",
+    "task4": "Participation aux tests fonctionnels, utilisateurs et de performance."
+  },
+
+  "projects_section": "Mes réalisations",
+  "projects": "Projets",
+  "projects_intro": "Les projets suivants illustrent mes compétences et mon expérience à travers des exemples concrets. Chaque projet est décrit brièvement avec des liens vers le code source et des démos en ligne.",
+
+  "proj1": {
+    "title": "Morocco Travel",
+    "desc": "Une plateforme d'agence de voyage permettant d'explorer des destinations, rechercher des voyages et réserver, avec support multilingue."
+  },
+  "proj2": {
+    "title": "Atlass Gym",
+    "desc": "Un site web de club de fitness présentant les services, événements et compétitions. Inclut l'inscription des utilisateurs et les informations de contact."
+  },
+  "proj3": {
+    "title": "Gestion Financière",
+    "desc": "Une application de gestion financière full-stack avec authentification Clerk, suivi des transactions, alertes budgétaires et tableau de bord administrateur."
+  },
+
+  "contact": {
+    "getInTouch": "Entrer en contact",
+    "successMessage": "Merci. Je vous répondrai dès que possible.",
+    "form": {
+      "nameLabel": "Votre nom",
+      "namePlaceholder": "Quel est votre nom ?",
+      "emailLabel": "Votre email",
+      "emailPlaceholder": "Quelle est votre adresse email ?",
+      "messageLabel": "Votre message",
+      "messagePlaceholder": "Que voulez-vous dire ?",
+      "sending": "Envoi en cours...",
+      "submit": "Contactez-moi"
+    }
+  }
+}

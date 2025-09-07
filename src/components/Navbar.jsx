@@ -5,7 +5,11 @@ import { styles } from "../styles";
 import { navLinks } from "../constants";
 import { logo, menu, close } from "../assets";
 
+import { useTranslation } from "react-i18next";
+
 const Navbar = () => {
+  const { t, i18n } = useTranslation();
+
   const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -53,10 +57,18 @@ const Navbar = () => {
             <span className="sm:block hidden"> | Full Stack Developer</span>
           </p>
         </Link>
+        <div className="sm:hidden flex justify-end mb-0" style={{ marginBottom: "0px !important", position: "absolute", right: "10px", top: "130px" }}>
+          <button
+            onClick={() =>
+              i18n.changeLanguage(i18n.language === "en" ? "fr" : "en")
+            }
+            className="ml-4 px-3 py-1 rounded bg-accent text-white cursor-pointer transition-colors duration-200 hover:bg-accent/90"
+          >
+            {i18n.language === "en" ? "FR" : "EN"}
+          </button>
+        </div>
 
-        <ul
-          className="list-none hidden sm:flex flex-row gap-10 pr-[70px]!"
-        >
+        <ul className="list-none hidden sm:flex flex-row gap-10 pr-[70px]!">
           {navLinks.map((nav) => (
             <li
               key={nav.id}
@@ -65,9 +77,17 @@ const Navbar = () => {
               } hover:text-white text-[19px] font-medium cursor-pointer`}
               onClick={() => setActive(nav.title)}
             >
-              <a href={`#${nav.id}`}>{nav.title}</a>
+              <a href={`#${nav.id}`}>{t(nav.title)}</a>
             </li>
           ))}
+          <button
+            onClick={() =>
+              i18n.changeLanguage(i18n.language === "en" ? "fr" : "en")
+            }
+            className="ml-4 px-3 py-1 rounded bg-accent text-white cursor-pointer transition-colors duration-200 hover:bg-accent/90"
+          >
+            {i18n.language === "en" ? "FR" : "EN"}
+          </button>
         </ul>
 
         <div className="sm:hidden flex flex-1 justify-end items-center">
@@ -95,7 +115,7 @@ const Navbar = () => {
                     setActive(nav.title);
                   }}
                 >
-                  <a href={`#${nav.id}`}>{nav.title}</a>
+                  <a href={`#${nav.id}`}>{t(nav.title)}</a>
                 </li>
               ))}
             </ul>
