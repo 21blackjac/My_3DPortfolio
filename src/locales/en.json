@@ -27,7 +27,7 @@
   "work_intro": "What I have done so far",
   "work_exp": "Work Experience",
 
-  "exp1": {
+  "exp2": {
     "title": "Full Stack Developer - Financial Management website",
     "company": "CIH BANK",
     "date": "June 2025 - July 2025 | Casablanca - Internship",
@@ -37,7 +37,7 @@
     "task4": "Implementing secure middleware using JWT and Clerk session verification."
   },
 
-  "exp2": {
+  "exp3": {
     "title": "Website Integration Project Assistant",
     "company": "Office National des Chemins de Fer",
     "date": "March 2024 - April 2024 | Rabat - Internship",
@@ -45,6 +45,16 @@
     "task2": "Participating in integration testing and verifying compatibility with existing systems.",
     "task3": "Contributing to the development of specific modules and debugging.",
     "task4": "Participating in functional, user, and performance testing to ensure quality."
+  },
+
+  "exp1": {
+    "title": "Full Stack Developer – GPS Tracking Management",
+    "company": "EMS Maloc",
+    "date": "August 2025 – Present | Kenitra – Internship",
+    "task1": "Developed a web platform for managing GPS devices, vehicle tracking, client accounts, and administration.",
+    "task2": "Built the Angular frontend with dynamic interfaces and REST API integration.",
+    "task3": "Implemented the Spring Boot backend: services, controllers, entities, and user authentication/authorization.",
+    "task4": "Designed and optimized the MySQL database, ensuring data synchronization and efficient queries."
   },
 
   "projects_section": "My work",

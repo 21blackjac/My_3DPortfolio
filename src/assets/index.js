@@ -21,10 +21,9 @@ import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import laravel from "./tech/laravel.png";
 
-import meta from "./company/meta.png";
-import shopify from "./company/shopify.png";
 import Cihbank from "./company/Cihbank.png";
 import Oncf from "./company/Oncf.png";
+import EMS from "./company/EMS.png";
 
 import moroccoTravel from "./moroccoTravel.png";
 import atlassGym from "./atlassGym.png";
@@ -52,10 +51,9 @@ export {
   tailwind,
   typescript,
   laravel,
-  meta,
-  shopify,
   Cihbank,
   Oncf,
+  EMS,
   moroccoTravel,
   atlassGym,
   financeApp,

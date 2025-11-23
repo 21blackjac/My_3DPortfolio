@@ -17,6 +17,7 @@ import {
   docker,
   Cihbank,
   Oncf,
+  EMS,
   laravel,
   moroccoTravel,
   atlassGym,
@@ -77,7 +78,7 @@ const experiences = [
   {
     title: "exp1.title", // ✅
     company_name: "exp1.company",
-    icon: Cihbank,
+    icon: EMS,
     iconBg: "#383E56",
     date: "exp1.date",
     points: ["exp1.task1", "exp1.task2", "exp1.task3", "exp1.task4"], // ✅
@@ -85,10 +86,18 @@ const experiences = [
   {
     title: "exp2.title", // ✅
     company_name: "exp2.company",
-    icon: Oncf,
+    icon: Cihbank,
     iconBg: "#E6DEDD",
     date: "exp2.date",
     points: ["exp2.task1", "exp2.task2", "exp2.task3", "exp2.task4"], // ✅
+  },
+  {
+    title: "exp3.title", // ✅
+    company_name: "exp3.company", // ✅
+    icon: Oncf,
+    iconBg: "#383E56",
+    date: "exp3.date", // ✅
+    points: ["exp3.task1", "exp3.task2", "exp3.task3", "exp3.task4"], // ✅
   },
 ];
 

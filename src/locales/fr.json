@@ -27,7 +27,7 @@
   "work_intro": "Ce que j'ai fait jusqu'à présent",
   "work_exp": "Expérience professionnelle",
 
-  "exp1": {
+  "exp2": {
     "title": "Développeur Full Stack - Site de gestion financière",
     "company": "CIH BANK",
     "date": "Juin 2025 - Juillet 2025 | Casablanca - Stage",
@@ -37,7 +37,7 @@
     "task4": "Mise en place d’un middleware sécurisé utilisant JWT et vérification des sessions Clerk."
   },
 
-  "exp2": {
+  "exp3": {
     "title": "Assistant Projet d’Intégration de Site Web",
     "company": "Office National des Chemins de Fer",
     "date": "Mars 2024 - Avril 2024 | Rabat - Stage",
@@ -45,6 +45,16 @@
     "task2": "Participation aux tests d’intégration et vérification de la compatibilité.",
     "task3": "Contribution au développement de modules spécifiques et débogage.",
     "task4": "Participation aux tests fonctionnels, utilisateurs et de performance."
+  },
+
+  "exp1": {
+    "title": "Développeur Full Stack – Gestion des Boîtiers GPS",
+    "company": "EMS Maloc",
+    "date": "Août 2025 – Jusqu'à présent | Kénitra – Stage",
+    "task1": "Développement d’une plateforme web pour la gestion des boîtiers GPS, le suivi des véhicules et des comptes clients.",
+    "task2": "Création du frontend Angular avec interfaces dynamiques et intégration des API REST.",
+    "task3": "Implémentation du backend Spring Boot : services, contrôleurs, entités et authentification/autorisation des utilisateurs.",
+    "task4": "Conception et optimisation de la base de données MySQL, synchronisation des données et requêtes performantes."
   },
 
   "projects_section": "Mes réalisations",
